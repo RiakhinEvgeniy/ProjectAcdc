@@ -38,6 +38,7 @@ public class EditUser implements Command {
                 .login(req.getParameter("login"))
                 .password(req.getParameter("password"))
                 .role(Role.valueOf(req.getParameter("role")))
+                .id(Long.valueOf(req.getParameter("id")))
                 .build();
         if (req.getParameter("create") != null) {
             userService.create(user);
@@ -45,6 +46,6 @@ public class EditUser implements Command {
             user.setId(Long.parseLong(req.getParameter("id")));
             userService.update(user);
         }
-        return getPage();
+        return getPage()+"?id="+user.getId();
     }
 }
