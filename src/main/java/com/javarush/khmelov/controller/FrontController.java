@@ -1,8 +1,8 @@
-package com.javarush.khmelov.lesson17.controller;
+package com.javarush.khmelov.controller;
 
-import com.javarush.khmelov.lesson17.cmd.Command;
-import com.javarush.khmelov.lesson17.config.Winter;
-import com.javarush.khmelov.lesson17.entity.Role;
+import com.javarush.khmelov.cmd.Command;
+import com.javarush.khmelov.config.Winter;
+import com.javarush.khmelov.entity.Role;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
@@ -16,7 +16,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-@WebServlet({"", "/list-user", "/edit-user", "/home"})
+@WebServlet({"", "/list-user", "/edit-user", "/home", "/article-word-train"})
 public class FrontController extends HttpServlet {
     
     private HttpResolver httpResolver;

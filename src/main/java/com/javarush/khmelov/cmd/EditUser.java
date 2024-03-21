@@ -1,8 +1,8 @@
-package com.javarush.khmelov.lesson17.cmd;
+package com.javarush.khmelov.cmd;
 
-import com.javarush.khmelov.lesson17.entity.Role;
-import com.javarush.khmelov.lesson17.entity.User;
-import com.javarush.khmelov.lesson17.service.UserService;
+import com.javarush.khmelov.entity.Role;
+import com.javarush.khmelov.entity.User;
+import com.javarush.khmelov.service.UserService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -38,7 +38,6 @@ public class EditUser implements Command {
                 .login(req.getParameter("login"))
                 .password(req.getParameter("password"))
                 .role(Role.valueOf(req.getParameter("role")))
-                .id(Long.valueOf(req.getParameter("id")))
                 .build();
         if (req.getParameter("create") != null) {
             userService.create(user);

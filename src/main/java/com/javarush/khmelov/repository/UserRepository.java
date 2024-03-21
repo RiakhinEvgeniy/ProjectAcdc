@@ -1,7 +1,7 @@
-package com.javarush.khmelov.lesson17.repository;
+package com.javarush.khmelov.repository;
 
-import com.javarush.khmelov.lesson17.entity.Role;
-import com.javarush.khmelov.lesson17.entity.User;
+import com.javarush.khmelov.entity.Role;
+import com.javarush.khmelov.entity.User;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -20,6 +20,7 @@ public class UserRepository implements Repository<User> {
         map.put(2L, new User(2L,"Bob","", Role.GUEST));
         map.put(3L, new User(3L,"Carl","admin", Role.ADMIN));
         map.put(4L, new User(4L,"Khmelov","admin", Role.ADMIN));
+        map.put(5L, new User(5L,"Riakhin","admin", Role.ADMIN));
     }
 
     @Override
