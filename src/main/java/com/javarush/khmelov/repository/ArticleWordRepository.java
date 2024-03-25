@@ -11,17 +11,16 @@ public class ArticleWordRepository implements RepositoryArticleWord<ArticleWord>
 
     private final Map<String, ArticleWord> articleWordMap = new HashMap<>();
 
-
-    @Override
-    public Collection<ArticleWord> getAll() {
-        return articleWordMap.values();
-    }
-
     public ArticleWordRepository() {
         articleWordMap.put("Pfanne", new ArticleWord("die", "Pfanne"));
         articleWordMap.put("Messer", new ArticleWord("das", "Messer"));
         articleWordMap.put("Teller", new ArticleWord("der", "Teller"));
         articleWordMap.put("Gabel", new ArticleWord("die", "Gabel"));
+    }
+
+    @Override
+    public Collection<ArticleWord> getAll() {
+        return articleWordMap.values();
     }
 
     @Override

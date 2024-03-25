@@ -2,6 +2,7 @@ package com.javarush.khmelov.controller;
 
 import com.javarush.khmelov.cmd.Command;
 import com.javarush.khmelov.config.Winter;
+import com.javarush.khmelov.entity.ArticleWord;
 import com.javarush.khmelov.entity.Role;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletConfig;
@@ -16,7 +17,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-@WebServlet({"", "/list-user", "/edit-user", "/home", "/article-word-train"})
+@WebServlet({"", "/list-user", "/edit-user", "/home", "/article-word-train", "/list-word", "/check-article"})
 public class FrontController extends HttpServlet {
     
     private HttpResolver httpResolver;
@@ -25,6 +26,11 @@ public class FrontController extends HttpServlet {
     public void init(ServletConfig config) throws ServletException {
         httpResolver = Winter.find(HttpResolver.class);
         config.getServletContext().setAttribute("roles", Role.values());
+//        ArticleWord articleWord = ArticleWord.builder()
+//                .article("article")
+//                .word("word")
+//                .build();
+//        config.getServletContext().setAttribute("articleWord", articleWord);
     }
 
     @Override
