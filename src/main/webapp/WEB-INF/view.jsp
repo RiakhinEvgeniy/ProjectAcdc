@@ -1,15 +1,49 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<%@include file="head.jsp" %>
+
 <head>
     <title>Title</title>
-</head>
-<body>
-<%--    <h2>${requestScope.article}</h2>--%>
-<h1>Неверно</h1>
 
-<form action="list-word" method="GET">
-    <button type="submit" >to list</button>
-</form>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            /*flex-direction: column;*/
+            height: 100vh;
+            margin: 0;
+            padding-top: 20px; /* Отступ сверху */
+        }
+        .container {
+            text-align: center;
+            margin-top: 20px; /* Отступ контейнера сверху */
+        }
+
+        button {
+            padding: 10px 20px; /* Паддинги для кнопок */
+            background-color: #007bff; /* Цвет фона кнопок */
+            color: white; /* Цвет текста */
+            border: none; /* Убрать стандартную рамку */
+            cursor: pointer; /* Курсор в виде руки */
+            transition: background-color 0.3s; /* Плавное изменение цвета */
+        }
+        button:hover {
+            background-color: #0056b3; /* Цвет фона при наведении */
+        }
+
+    </style>
+
+<body>
+
+<div class="container">
+
+    <h2>Неверно</h2>
+
+    <form action="list-word" method="GET">
+        <button type="submit">To List Words</button>
+    </form>
+
+</div>
 
 </body>
-</html>
+

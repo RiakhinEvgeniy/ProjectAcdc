@@ -22,20 +22,7 @@ public class CheckArticle implements Command {
     public String doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String wordId = req.getParameter("id");
         String articleFromReq = req.getParameter("article");
-        if (wordId != null) {
-            Optional<ArticleWord> articleFromButton = articleWordService.get(wordId);
-            if (articleFromButton.isPresent()) {
-                String article = articleFromButton.get().getArticle();
-                String word = articleFromButton.get().getWord();
-                if (articleFromReq.equals(article)) {
-                    req.setAttribute("article", article);
-                    req.setAttribute("word", word);
-                } else {
-                    RequestDispatcher dispatcher = req.getRequestDispatcher("WEB-INF/view.jsp");
-                    dispatcher.forward(req, resp);
-                }
-            }
-        }
+        articleWordService.checkingCorrectAnswer(wordId, articleFromReq, req, resp);
         return getJspPage();
     }
 }

@@ -1,5 +1,6 @@
 package com.javarush.khmelov.cmd;
 
+import com.javarush.khmelov.entity.ArticleWord;
 import com.javarush.khmelov.entity.User;
 import com.javarush.khmelov.service.UserService;
 import jakarta.servlet.ServletException;
