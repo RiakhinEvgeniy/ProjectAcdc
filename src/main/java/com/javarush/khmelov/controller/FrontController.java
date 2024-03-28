@@ -22,7 +22,7 @@ public class FrontController extends HttpServlet {
     private HttpResolver httpResolver;
 
     @Override
-    public void init(ServletConfig config) throws ServletException {
+    public void init(ServletConfig config) {
         httpResolver = Winter.find(HttpResolver.class);
         config.getServletContext().setAttribute("roles", Role.values());
     }
