@@ -16,6 +16,9 @@ public class ArticleWordRepository implements RepositoryArticleWord<ArticleWord>
         articleWordMap.put("Messer", new ArticleWord("das", "Messer"));
         articleWordMap.put("Teller", new ArticleWord("der", "Teller"));
         articleWordMap.put("Gabel", new ArticleWord("die", "Gabel"));
+        articleWordMap.put("Auto", new ArticleWord("das", "Auto"));
+        articleWordMap.put("Tisch", new ArticleWord("der", "Tisch"));
+        articleWordMap.put("Lampe", new ArticleWord("die", "Lampe"));
     }
 
     @Override

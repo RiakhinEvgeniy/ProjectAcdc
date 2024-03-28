@@ -38,11 +38,11 @@
 <div class="container">
 
 <h1>${requestScope.article} ${requestScope.word}</h1>
-    <br>
-<h1>Правильно</h1>
-
+<br>
+<h2>Правильно</h2>
+<br>
 <form action="list-word" method="GET">
-    <button type="submit" >To List Words</button>
+    <button type="submit" >К списку слов</button>
 </form>
 
 </div>

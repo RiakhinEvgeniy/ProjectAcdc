@@ -2,12 +2,9 @@ package com.javarush.khmelov.cmd;
 
 import com.javarush.khmelov.entity.ArticleWord;
 import com.javarush.khmelov.service.ArticleWordService;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import java.io.IOException;
-import java.util.Collection;
 import java.util.Optional;
 
 public class ArticleWordTrain implements Command {
@@ -19,7 +16,7 @@ public class ArticleWordTrain implements Command {
     }
 
     @Override
-    public String doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public String doGet(HttpServletRequest req, HttpServletResponse resp) {
 
         String word = req.getParameter("id");
         if (word != null) {

@@ -31,6 +31,18 @@
         color: #007bff; /* Цвет текста при наведении */
         /* Дополнительные стили для ссылок при наведении */
     }
+
+    button {
+        padding: 10px 20px; /* Паддинги для кнопок */
+        background-color: #007bff; /* Цвет фона кнопок */
+        color: white; /* Цвет текста */
+        border: none; /* Убрать стандартную рамку */
+        cursor: pointer; /* Курсор в виде руки */
+        transition: background-color 0.3s; /* Плавное изменение цвета */
+    }
+    button:hover {
+        background-color: darkkhaki; /* Цвет фона при наведении */
+    }
 </style>
 
     </head>
@@ -40,14 +52,15 @@
 
     <h2>Нажмите на слово для тренировки артикля</h2>
 
-    <c:set var="length" scope="session" value="${requestScope.articleWords.size()}"/>
-
 <c:forEach var="word" items="${requestScope.articleWords}">
 
     <h2><a href="article-word-train?id=${word.word}">${word.word}</a></h2>
 
 </c:forEach>
 
+    <form action="home" method="GET">
+        <button type="submit">Вернуться</button>
+    </form>
 </div>
 
 </body>

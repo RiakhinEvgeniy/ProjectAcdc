@@ -18,7 +18,6 @@
             text-align: center;
             margin-top: 20px; /* Отступ контейнера сверху */
         }
-
         button {
             padding: 10px 20px; /* Паддинги для кнопок */
             background-color: #007bff; /* Цвет фона кнопок */
@@ -35,12 +34,15 @@
 
 <body>
 
+<c:set var="savedArticle" value="${requestScope.word.article}"/>
+<c:set var="savedWord" value="${requestScope.word.word}"/>
+
 <div class="container">
 
     <h2>Неверно</h2>
-
+    <br>
     <form action="list-word" method="GET">
-        <button type="submit">To List Words</button>
+        <button type="submit">К списку</button>
     </form>
 
 </div>

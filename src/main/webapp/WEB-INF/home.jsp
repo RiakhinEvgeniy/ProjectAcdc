@@ -33,11 +33,11 @@
 
 <body>
 <div class="container">
-    <h1><%= "// TODO Описание для начала тренажера" %></h1>
+    <h2><%= "Начни тренировать артикли немецкого языка" %></h2>
     <div class="row">
         <div class="col">
     <form action="list-word" method="get">
-        <button type="submit">To List Words</button>
+        <button type="submit">К списку слов</button>
     </form>
         </div>
     </div>
