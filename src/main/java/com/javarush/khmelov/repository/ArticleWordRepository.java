@@ -27,8 +27,8 @@ public class ArticleWordRepository implements RepositoryArticleWord<ArticleWord>
     }
 
     @Override
-    public Optional<ArticleWord> get(String article) {
-        return Optional.ofNullable(articleWordMap.get(article));
+    public Optional<ArticleWord> get(String wordKey) {
+        return Optional.ofNullable(articleWordMap.get(wordKey));
     }
 
     @Override

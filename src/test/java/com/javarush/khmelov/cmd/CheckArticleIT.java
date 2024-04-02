@@ -7,8 +7,6 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class CheckArticleIT extends BaseIT {
 
     CheckArticle checkArticle = Winter.find(CheckArticle.class);
