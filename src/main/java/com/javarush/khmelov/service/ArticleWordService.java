@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.Optional;
 
+@SuppressWarnings("unused")
 public class ArticleWordService {
     private final ArticleWordRepository articleWordRepository;
 

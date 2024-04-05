@@ -4,21 +4,21 @@ import com.javarush.khmelov.cmd.BaseIT;
 import com.javarush.khmelov.config.Winter;
 import com.javarush.khmelov.entity.ArticleWord;
 import com.javarush.khmelov.repository.ArticleWordRepository;
-import com.javarush.khmelov.repository.RepositoryArticleWord;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-class ArticleWordServiceIT {
+import static org.mockito.Mockito.times;
 
-    //private final ArticleWordService articleWordService = Winter.find(ArticleWordService.class);
+class ArticleWordServiceIT extends BaseIT {
+
+    private final ArticleWordService articleWordService = Winter.find(ArticleWordService.class);
     @Test
-    void getAll() {
+    void getAllTest() {
         ArticleWordRepository repo = Mockito.mock(ArticleWordRepository.class);
         Collection<ArticleWord> stubForCollection = List.of(new ArticleWord(), new ArticleWord());
         int size = stubForCollection.size();
@@ -29,7 +29,7 @@ class ArticleWordServiceIT {
     }
 
     @Test
-    void get() {
+    void getTest() {
         ArticleWordRepository repo = Mockito.mock(ArticleWordRepository.class);
         Optional<ArticleWord> optionalArticleWord = Optional.of(new ArticleWord("die", "Pfanne"));
         String article = optionalArticleWord.get().getArticle();
@@ -49,11 +49,12 @@ class ArticleWordServiceIT {
     }
 
     @Test
-    void delete() {
+    void deleteTest() {
+
     }
 
     @Test
-    void checkingCorrectAnswer() {
+    void checkingCorrectAnswerTest() {
 
     }
 }

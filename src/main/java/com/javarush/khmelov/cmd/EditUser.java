@@ -33,7 +33,7 @@ public class EditUser implements Command {
     }
 
     @Override
-    public String doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public String doPost(HttpServletRequest req, HttpServletResponse resp) {
         User user = User.builder()
                 .login(req.getParameter("login"))
                 .password(req.getParameter("password"))
